@@ -105,7 +105,7 @@ public class TransformGraph {
         path.add(nameList[de]);
         Collections.reverse(path);
         System.out.println(path);
-        System.out.println("Total "+(path.size()-1)+" stops!");
+        System.out.println((path.size()-1)+" stops to get to "+ path.get(path.size() - 1) +"!");
     }
 
 
