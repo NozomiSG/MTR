@@ -17,7 +17,6 @@ public class TransformGraph {
         readFile();
         storeInHashMap();
         adjacencyMatrix = new boolean[index][index];
-
         generateGraph();
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -28,19 +27,15 @@ public class TransformGraph {
             else
                 System.out.println("No station found, please enter again!");
         }
-        System.out.print("Please enter arrival station: ");
         while (true) {
+            System.out.print("Please enter arrival station: ");
             re = scanner.nextLine();
             if (map.containsKey(re))
                 break;
             else
                 System.out.println("No station found, please enter again!");
         }
-
         BFS(map.get(de), map.get(re));
-//        computePath(de);
-//        System.out.println("Length is: "+dis[map.get(re)]);
-//        printPath(dis[map.get(re)]);
     }
     public static void readFile() {
         // Read stations by subway lines and store it into mtr array
@@ -110,6 +105,7 @@ public class TransformGraph {
         path.add(nameList[de]);
         Collections.reverse(path);
         System.out.println(path);
+        System.out.println("Total "+(path.size()-1)+" stops!");
     }
 
 
